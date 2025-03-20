@@ -9,6 +9,7 @@ const app = express();
 
 const PORT = process.env.PORT || 9000
 
+//Database connection
 connectDB();
 
 app.use(express.json());
@@ -20,6 +21,7 @@ app.get('/',(req,res)=>{
 })
 
 
+// Error handler middleware
 app.use(notFound)
 app.use(errorHandler)
 
